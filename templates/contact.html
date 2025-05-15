@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h2 class="mb-4 text-center">Contact Me</h2>
+  <form method="POST" action="/contact" class="mx-auto" style="max-width: 600px;">
+    <div class="mb-3">
+      <label for="name" class="form-label">Name</label>
+      <input type="text" class="form-control" name="name" id="name" required>
+    </div>
+    <div class="mb-3">
+      <label for="email" class="form-label">Email</label>
+      <input type="email" class="form-control" name="email" id="email" required>
+    </div>
+    <div class="mb-3">
+      <label for="subject" class="form-label">Subject</label>
+      <input type="text" class="form-control" name="subject" id="subject" required>
+    </div>
+    <div class="mb-3">
+      <label for="message" class="form-label">Description</label>
+      <textarea class="form-control" name="message" id="message" rows="6" required></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary w-100">Send Email</button>
+  </form>
+
+  {% with messages = get_flashed_messages() %}
+    {% if messages %}
+      <div class="alert alert-info mt-4 text-center">
+        {{ messages[0] }}
+      </div>
+    {% endif %}
+  {% endwith %}
+{% endblock %}
+

@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container bg-white p-5 rounded shadow-sm">
+  <div class="d-flex justify-content-between align-items-center mb-4">
+    <h1 class="text-primary"><i class="fa-solid fa-diagram-project"></i> Projects</h1>
+    <a href="https://github.com/rsnstkw" class="btn btn-outline-dark" target="_blank">
+      <i class="fa-brands fa-github"></i> Visit my GitHub
+    </a>
+  </div>
+
+  <div class="mb-5">
+    <h4 class="text-secondary">🔧 GitLab Server & CI/CD Pipelines</h4>
+    <p>Set up and maintain a self-hosted GitLab instance used company-wide for version control, issue tracking, and CI/CD. Created custom pipelines for automated deployment, testing, and system updates.</p>
+    <ul>
+      <li>Technologies: GitLab, Docker, GitLab Runners, NGINX, SSL, CI/CD YAML</li>
+      <li>Integrated with Ansible and Jenkins for infrastructure automation</li>
+    </ul>
+  </div>
+
+  <div class="mb-5">
+    <h4 class="text-secondary">📦 Infrastructure Automation with Ansible</h4>
+    <p>Deployed Ansible AWX platform and developed dozens of playbooks for automating server setup, configuration enforcement, and updates across hybrid environments.</p>
+    <ul>
+      <li>Used for Linux servers, networking devices, firewall policies</li>
+      <li>Secrets management via HashiCorp Vault</li>
+    </ul>
+  </div>
+
+  <div class="mb-5">
+    <h4 class="text-secondary">☁️ Hybrid Cloud AD & Security</h4>
+    <p>Implemented and managed hybrid Active Directory between Azure and on-prem environments with secure policies and user provisioning. Automated GPOs and ensured compliance.</p>
+    <ul>
+      <li>Technologies: Azure AD, On-Prem AD, PowerShell, Group Policies</li>
+      <li>Firewall: Fortinet, Cloudflare integration</li>
+    </ul>
+  </div>
+
+  <div class="mb-5">
+    <h4 class="text-secondary">📊 Kubernetes Clusters & Storage</h4>
+    <p>Built and maintained OpenShift Kubernetes clusters with Helm-based application deployments and persistent storage using Rook Ceph. Ensured HA and performance.</p>
+    <ul>
+      <li>Tools: OpenShift, Helm, Rook Ceph, Prometheus, Grafana</li>
+      <li>Backup, restore, and alerting systems implemented</li>
+    </ul>
+  </div>
+</div>
+{% endblock %}
